@@ -24,14 +24,17 @@ zuul:
    routes:
        order: 
          path: /order/**
+         sensitiveHeaders: Cookie,Set-Cookie,Authorization
          serviceId: order-management-service
          stripPrefix: false
        customer: 
            path: /customer/**
+           sensitiveHeaders: Cookie,Set-Cookie,Authorization
            serviceId: customer-management-service
            stripPrefix: false
        analytics: 
             path: /analytics/**
+            sensitiveHeaders: Cookie,Set-Cookie,Authorization
             serviceId: analytics-management-service
             stripPrefix: false
                 
