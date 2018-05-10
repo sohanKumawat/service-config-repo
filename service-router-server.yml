@@ -24,9 +24,11 @@ zuul:
      order: 
         path: /**
         serviceId: order-management-service
+        url: http://localhost:8075/
      customer: 
            path: /**
            serviceId: customer-management-service
+           url: http://localhost:8089/
   #   analytics: 
   #         path: /**
   #         serviceId: analytics-management-service
@@ -39,5 +41,5 @@ eureka:
      client:
          service-url:
                   default-zone: http://localhost:8761/eureka
-         registerWithEureka: false         
+         registerWithEureka: true         
 ...
