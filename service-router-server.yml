@@ -32,9 +32,10 @@ zuul:
            serviceId: customer-management-service
          #  url: http://localhost:8089/
            stripPrefix: false
-  #   analytics: 
-  #         path: /**
-  #         serviceId: analytics-management-service
+       analytics: 
+            path: /analytics/**
+            serviceId: analytics-management-service
+            stripPrefix: false
                 
 ribbon:
   ConnectTimeout: 30000
