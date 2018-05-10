@@ -18,8 +18,8 @@ endpoints:
 # eureka.client.registerWithEureka=true
 # eureka.client.fetchRegistry=true
 zuul:
-   prefix: /api/v1
-   stripPrefix: false
+  # prefix: /api/v1
+ #  stripPrefix: false
    routes:
      order: 
         path: /**
@@ -27,9 +27,9 @@ zuul:
      customer: 
            path: /**
            serviceId: customer-management-service
-     analytics: 
-           path: /**
-           serviceId: analytics-management-service
+  #   analytics: 
+  #         path: /**
+  #         serviceId: analytics-management-service
                 
 ribbon:
   eureka:
