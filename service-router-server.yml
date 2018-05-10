@@ -25,12 +25,10 @@ zuul:
        order: 
          path: /order/**
          serviceId: order-management-service
-       #  url: http://localhost:8075/
          stripPrefix: false
        customer: 
            path: /customer/**
            serviceId: customer-management-service
-         #  url: http://localhost:8089/
            stripPrefix: false
        analytics: 
             path: /analytics/**
