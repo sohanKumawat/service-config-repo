@@ -1,6 +1,6 @@
 ---
 server:
-  port: 8060
+  port: 8070
 
 logging:
   pattern: 
@@ -22,14 +22,14 @@ zuul:
    stripPrefix: false
    routes:
      order: 
-       path: /**
+       path: /order/**
        serviceId: order-management-service
-     customer: 
-       path: /**
-       serviceId: customer-management-service
-     analytics: 
-       path: /**
-       serviceId: analytics-management-service
+#     customer: 
+ #      path: /**
+ #      serviceId: customer-management-service
+ #    analytics: 
+ #      path: /**
+ #      serviceId: analytics-management-service
                 
 ribbon:
   eureka:
