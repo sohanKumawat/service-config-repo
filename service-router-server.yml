@@ -18,22 +18,29 @@ endpoints:
 # eureka.client.registerWithEureka=true
 # eureka.client.fetchRegistry=true
 zuul:
-  # prefix: /api/v1
+ #  prefix: /api/v1
  #  stripPrefix: false
+ #  ignoredServices: '*'   
    routes:
-     order: 
-        path: /**
-        serviceId: order-management-service
-        url: http://localhost:8075/
-     customer: 
-           path: /**
+       order: 
+         path: /order/**
+         serviceId: order-management-service
+       #  url: http://localhost:8075/
+         stripPrefix: false
+       customer: 
+           path: /customer/**
            serviceId: customer-management-service
-           url: http://localhost:8089/
+         #  url: http://localhost:8089/
+           stripPrefix: false
   #   analytics: 
   #         path: /**
   #         serviceId: analytics-management-service
                 
 ribbon:
+  ConnectTimeout: 30000
+  ReadTimeout: 990000
+  maxAutoRetries: 1
+  MaxAutoRetriesNextServer: 2
   eureka:
     enabled: true
     
@@ -41,5 +48,5 @@ eureka:
      client:
          service-url:
                   default-zone: http://localhost:8761/eureka
-         registerWithEureka: true         
+         registerWithEureka: false         
 ...
