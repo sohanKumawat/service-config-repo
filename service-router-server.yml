@@ -24,12 +24,12 @@ zuul:
      order: 
        path: /**
        serviceId: order-management-service
-     customer: 
-       path: /**
-       serviceId: customer-management-service
-     analytics: 
-       path: /**
-       serviceId: analytics-management-service
+#     customer: 
+#       path: /**
+#       serviceId: customer-management-service
+#     analytics: 
+#       path: /**
+#       serviceId: analytics-management-service
                 
 ribbon:
   eureka:
